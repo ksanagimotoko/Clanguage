@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <windows.h> //system("cls")
+#include <conio.h> // getch(), getche()
+
+int main()
+{
+	int a;
+	int b;
+	
+	while(1)
+	{
+		//if click arrow, you get two number 224 and 75(L), 77(R), 72(U), 80(D)
+		a = getch();
+		if (a==224){
+			a = getch();
+			switch(a){
+				case 75: printf(" LEFT "); break;
+				case 77: printf(" RIGHT"); break;
+				case 72: printf(" UP"); break;
+				case 80: printf(" DOWN"); break;
+			}
+			printf("\n");
+		}
+		
+		
+	}
+	
+	return 0;
+}
