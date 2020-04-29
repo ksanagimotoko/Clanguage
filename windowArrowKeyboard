@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <windows.h> //system("cls")
+#include <windows.h> //system("cls"), kbhit()
 #include <conio.h> // getch(), getche()
 
 int main()
