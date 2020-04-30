@@ -3,8 +3,28 @@ r           opens an existing file for reading
 w           opens an existing file for writing - creates a new file if none exists and discards all its previous contents.
 a           appends-opens or creates a text file for writing at the end of the file.
 
+fseek( ) 함수를 다룰 줄 알아야 한다.
+
+
+
 r+          read/update
-            Open a file for update(both for input and output). The file must exit.
+            The file must exit.
+            Open a file for update(both for input and output). 
+            
+            
+            읽기, 쓰기의 fseek을 지정해주어야 한다.
+            읽기를 한 참 하고나서 쓰기를 하려면 위치를 새롭게 지정해주어야 한다.
+            
+            FILE *fp = fopen("test.txt", "r+");
+            if (fp != NULL) {
+                        int c = fgetc(fp); // 한 문자를 읽어들인다.
+                        fseek(fp, 0l, SEEK_SET); //number0 and alphabet l
+                        fputc('A', fp); 
+            
+            
+            
+            
+            
             
 w+          write/update
             Create an empty file and open it for update(both for input and output).
